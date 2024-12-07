@@ -1,3 +1,4 @@
+#На числовой оси расположены три точки: A, B, C. Определить, какая из двух последних точек (B или C) расположена ближе к A, и вывести эту точку и ее расстояние от отчки A.
 def numeric_axis(A, B, C):
    if A > B:
        distance_B = A - B
@@ -19,4 +20,4 @@ B = 8
 C = 7
 axis_result = numeric_axis(A, B, C)
 print(f"Самая близкая точка к A: {axis_result[0]}")
-print(f"Расстояние от A: {axis_result[1]}")
+print(f"Расстояние от точки A: {axis_result[1]}")
