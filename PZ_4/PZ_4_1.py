@@ -9,6 +9,8 @@ def product_number(n):
         return product
     except ValueError as e:
         print(f"Увы, произошла ошибка: {e}")
+        return 0
 n = int(input("Введите число n: "))
 result = product_number(n)
-print(result)
+if result != 0:
+    print(result)
