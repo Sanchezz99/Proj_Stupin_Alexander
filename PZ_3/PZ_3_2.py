@@ -7,7 +7,7 @@ def numeric_axis(A, B, C):
         B = float(B)
         C = float(C)
     except ValueError:
-        raise ValueError("Все входные параметры должны быть числами.")
+        raise ValueError("Вы должны вводить числа.")
     if A > B:
         distance_B = A - B
     else:
