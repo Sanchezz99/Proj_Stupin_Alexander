@@ -24,4 +24,5 @@ A = int(input("Введите число A: "))
 B = int(input("Введите число B: "))
 C = int(input("Введите число C: "))
 result = count_squares(A, B, C)
-print("Колличество квадратов, размещенных на прямоугольнике:", result)
+if result is not None:
+    print("Колличество квадратов, размещенных на прямоугольнике:", result)

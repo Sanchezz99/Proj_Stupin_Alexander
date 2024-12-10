@@ -4,8 +4,10 @@ def product_number(n):
         if n < 0:
             raise ValueError("n не должен быть отрицательным")
         product = 1.0
-        for i in range(1, n + 1):
+        i = 1
+        while i <= n:
             product *= 1 + i / 10
+            i += 1
         return product
     except ValueError as e:
         print(f"Увы, произошла ошибка: {e}")
