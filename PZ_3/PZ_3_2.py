@@ -27,7 +27,6 @@ while True:
         A = int(input("Введите точку A: "))
         B = int(input("Введите точку B: "))
         C = int(input("Введите точку C: "))
-
         axis_result = numeric_axis(A, B, C)
         print(f"Самая близкая точка к A: {axis_result[0]}")
         print(f"Расстояние от точки A: {axis_result[1]}")
