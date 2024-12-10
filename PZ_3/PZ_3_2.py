@@ -5,12 +5,8 @@ def numeric_axis(A, B, C):
     A = float(A)
     B = float(B)
     C = float(C)
-    try:
-        if A < 0 or B < 0 or C < 0:
-            raise ValueError("Числа не должны быть отрицательными")
-    except ValueError as e:
-        print(f"Ошибка: {e}")
-        return None
+    if A < 0 or B < 0 or C < 0:
+        raise ValueError("Числа не должны быть отрицательными")
     if A > B:
         distance_B = A - B
     else:
@@ -26,12 +22,15 @@ def numeric_axis(A, B, C):
         axis_point = "C"
         main_distance = distance_C
     return axis_point, main_distance
-A = int(input("Введите точку A: "))
-B = int(input("Введите точку B: "))
-C = int(input("Введите точку C: "))
-try:
-    axis_result = numeric_axis(A, B, C)
-    print(f"Самая близкая точка к A: {axis_result[0]}")
-    print(f"Расстояние от точки A: {axis_result[1]}")
-except ValueError as e:
-    print(f"Ошибка: {e}")
+while True:
+    try:
+        A = int(input("Введите точку A: "))
+        B = int(input("Введите точку B: "))
+        C = int(input("Введите точку C: "))
+
+        axis_result = numeric_axis(A, B, C)
+        print(f"Самая близкая точка к A: {axis_result[0]}")
+        print(f"Расстояние от точки A: {axis_result[1]}")
+        break
+    except ValueError as e:
+        print(f"Ошибка: {e}. Попробуйте снова.")
