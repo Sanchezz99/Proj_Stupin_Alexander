@@ -4,12 +4,12 @@
 #Условный оператор не использовать. 
 def integer_list(A):
     if type(A) is not list:
-        raise ValueError("Входные данные должны быть списком.")
+        raise TypeError("Входные данные должны быть списком.")
     B = A[::2] + A[1::2]
     return B
 try:
     A = [2, 4, 6, 8, 10, 12]
     modified_list = integer_list(A)
     print(modified_list)
-except ValueError as e:
-    print(f"Увы, произошла ошабка: {e}")
+except TypeError as e:
+    print(f"Увы, произошла ошибка: {e}")
