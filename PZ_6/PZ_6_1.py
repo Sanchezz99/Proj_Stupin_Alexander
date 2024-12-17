@@ -9,6 +9,7 @@ try:
     A = [1, 2, 3, 4, 5, 6]
     K = 2
     modified_list = common_list(A, K)
-    print(modified_list)
+    print("Исходный список:", A)
+    print("Результирующий список:", modified_list)
 except ValueError as e:
     print(f"Увы, произошла ошибка: {e}")

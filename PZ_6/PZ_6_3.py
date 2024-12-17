@@ -9,6 +9,7 @@ def shift_elements(A):
 try:
     A = [1, 2, 3, 4, 5, 6]
     modified_list = shift_elements(A)
-    print(modified_list)
+    print("Исходный список:", A)
+    print("Результирующий список:", modified_list)
 except TypeError as e:
     print(f"Увы, произошла ошибка: {e}")

@@ -10,6 +10,7 @@ def integer_list(A):
 try:
     A = [2, 4, 6, 8, 10, 12]
     modified_list = integer_list(A)
-    print(modified_list)
+    print("Исходный список:", A)
+    print("Результирующий список:", modified_list)
 except TypeError as e:
     print(f"Увы, произошла ошибка: {e}")
