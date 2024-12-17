@@ -2,7 +2,7 @@
 #Преобразовать список, увеличив каждый его элемент на исходное значение элемента AK.
 def common_list(A, K):
     if not (1 < K < len(A)):
-        raise ValueError("K должен быть больше 1 и меньше размера списка N.")
+        raise ValueError("K должно быть больше 1 и меньше размера списка N.")
     increment_value = A[K]
     return [i + increment_value for i in A]
 try:
