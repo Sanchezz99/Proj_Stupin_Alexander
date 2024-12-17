@@ -3,9 +3,9 @@
 #a исходное значение последнего элемента будет потеряно). 
 #Первый элемент полученного списка положить равным 0. 
 def shift_elements(A):
-     if type(A) is not list:
+    if type(A) is not list:
         raise TypeError("Входные данные должны быть списком.")
-     return [0] + A[:-1]
+    return [0] + A[:-1]
 try:
     A = [1, 2, 3, 4, 5, 6]
     modified_list = shift_elements(A)
