@@ -6,8 +6,9 @@ def common_list(A, K):
     increment_value = A[K]
     return [i + increment_value for i in A]
 try:
-    A = [1, 2, 3, 4, 5, 6]
-    K = 2
+    user_input = input("Введите элементы списка A, разделенные запятыми: ")
+    A = [int(x.strip()) for x in user_input.split(',')]
+    K = int(input("Введите значение K: "))
     modified_list = common_list(A, K)
     print("Исходный список:", A)
     print("Результирующий список:", modified_list)

@@ -3,14 +3,13 @@
 #а затем — с нечетными: A2,  А4,  А6, …,  A1,  A3,  А5, … .
 #Условный оператор не использовать. 
 def integer_list(A):
-    if type(A) is not list:
-        raise TypeError("Входные данные должны быть списком.")
     B = A[::2] + A[1::2]
     return B
 try:
-    A = [2, 4, 6, 8, 10, 12]
+    input_values = input("Введите значения списка A, разделенные запятыми: ")
+    A = [int(x.strip()) for x in input_values.split(",")]
     modified_list = integer_list(A)
     print("Исходный список:", A)
     print("Результирующий список:", modified_list)
-except TypeError as e:
-    print(f"Увы, произошла ошибка: {e}")
+except ValueError:
+    print("Ошибка: Пожалуйста, введите только целые числа.")
