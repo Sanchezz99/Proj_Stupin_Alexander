@@ -6,8 +6,8 @@ def integer_list(A):
     B = A[::2] + A[1::2]
     return B
 try:
-    input_values = input("Введите значения списка A, разделенные запятыми: ")
-    A = [int(x.strip()) for x in input_values.split(",")]
+    user_input = input("Введите элементы (6) списка A, разделенные запятыми: ")
+    A = [int(x.strip()) for x in user_input.split(',')]
     modified_list = integer_list(A)
     print("Исходный список:", A)
     print("Результирующий список:", modified_list)
