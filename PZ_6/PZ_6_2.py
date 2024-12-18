@@ -7,12 +7,12 @@ def integer_list(A):
     B = A[::2] + A[1::2]
     return B
 try:
-    n = int(input("Введите количество элементов в списке A: "))
-    if n <= 0:
+    N = int(input("Введите количество элементов в списке A: "))
+    if N <= 0:
         raise ValueError("Количество элементов должно быть больше 0.")
-    A = [random.randint(1, 100) for _ in range(n)]
+    A = [random.randint(1, 100) for _ in range(N)]
     modified_list = integer_list(A)
     print("Исходный список:", A)
     print("Результирующий список:", modified_list)
-except ValueError:
-    print("Увы, произошла ошибка: Пожалуйста, введите только целые числа.")
+except ValueError as e:
+    print(f"Увы, произошла ошибка: {e}")

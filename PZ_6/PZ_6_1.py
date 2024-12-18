@@ -7,8 +7,10 @@ def common_list(A, K):
     increment_value = A[K]
     return [i + increment_value for i in A]
 try:
-    n = int(input("Введите количество элементов в списке A: "))
-    A = [random.randint(1, 100) for _ in range(n)]
+    N = int(input("Введите количество элементов в списке A: "))
+    if N <= 0:
+        raise ValueError("Количество элементов должно быть больше 0.")
+    A = [random.randint(1, 100) for _ in range(N)]
     K = int(input("Введите значение K: "))
     modified_list = common_list(A, K)
     print("Исходный список:", A)
