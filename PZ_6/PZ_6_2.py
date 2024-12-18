@@ -2,12 +2,15 @@
 #того же размера вначале все элементы исходного списка с четными номерами,
 #а затем — с нечетными: A2,  А4,  А6, …,  A1,  A3,  А5, … .
 #Условный оператор не использовать. 
+import random
 def integer_list(A):
     B = A[::2] + A[1::2]
     return B
 try:
-    user_input = input("Введите элементы (6) списка A, разделенные запятыми: ")
-    A = [int(x.strip()) for x in user_input.split(',')]
+    n = int(input("Введите количество элементов в списке A: "))
+    if n <= 0:
+        raise ValueError("Количество элементов должно быть больше 0.")
+    A = [random.randint(1, 100) for _ in range(n)]
     modified_list = integer_list(A)
     print("Исходный список:", A)
     print("Результирующий список:", modified_list)
