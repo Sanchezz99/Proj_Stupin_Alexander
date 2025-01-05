@@ -2,8 +2,8 @@
 #расположенную между первым и вторым пробелом исходной строки. Если строка 
 #содержит только один пробел, то вывести пустую строку.
 def common_line(input_string):
-    if not input_string.strip():
-      raise ValueError("Строка не должна быть пустой.")
+    if input_string == "":
+        raise ValueError("Строка не должна быть пустой.")
     words = input_string.split()
     if len(words) < 3:
         return "", words
