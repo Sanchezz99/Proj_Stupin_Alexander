@@ -8,9 +8,9 @@ def common_line(S, C, S0):
     if S0 == "":
         raise ValueError("Строка S0 не должна быть пустой.")
     result = ""
-    for char in S:
-        result += char
-        if char == C:
+    for i in S:
+        result += i
+        if i == C:
             result += S0
     return result
 S = input("Введите строку S: ")
