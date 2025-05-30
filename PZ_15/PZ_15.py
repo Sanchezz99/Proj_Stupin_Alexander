@@ -8,7 +8,7 @@ with sq.connect("PZ_15\dry_cleaning.db") as con:
     tab.execute("""CREATE TABLE IF NOT EXISTS services(familiya_master varchar(20) not null, 
     name_master varchar(20) not null, otchestvo_master varchar(20) not null, client_familiya varchar(20) not null,
     client_name varchar(20) not null, client_otchestvo varchar(20) not null, cleaning_type varchar(30) not null, 
-    price decimal(10, 2) not null, skidka decimal(10,2) not null)""")
+    price decimal(10, 2) not null, skidka decimal(10, 2) not null)""")
     information = [
         ("Иванов", "Алексей", "Сергеевич", "Петрова", "Мария", "Николаевна", "Сухая чистка", 1000, 200),
         ("Сидоров", "Дмитрий", "Андреевич", "Смирнова", "Анна", "Владимировна", "Химчистка", 1200, 290),
@@ -22,11 +22,11 @@ with sq.connect("PZ_15\dry_cleaning.db") as con:
         ("Михайлов", "Олег", "Николаевич", "Белова", "Анна", "Сергеевна", "Химчистка", 1250, 180)
     ]
     tab.executemany("INSERT INTO services VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", information)
-    #tab.execute("SELECT * FROM services WHERE familiya_master = ?", ("Михайлов",))
+    #tab.execute("SELECT * FROM services WHERE familiya_master = 'Михайлов'")
     #print(tab.fetchall())
-    #tab.execute("SELECT * FROM services WHERE cleaning_type = ?", ("Полная чистка",))
+    #tab.execute("SELECT * FROM services WHERE cleaning_type = 'Полная чистка'")
     #print(tab.fetchall())
-    #tab.execute("SELECT * FROM services WHERE price > ?", (1250,))
+    #tab.execute("SELECT * FROM services WHERE price > 1250")
     #print(tab.fetchall())
 
     #tab.execute("DELETE FROM services WHERE client_familiya = ?", ("Михайлов",))
