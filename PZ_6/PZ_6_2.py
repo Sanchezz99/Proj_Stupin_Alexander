@@ -4,7 +4,7 @@
 #Условный оператор не использовать. 
 import random
 def integer_list(A):
-    B = A[::2] + A[1::2]
+    B = A[1::2] + A[::2]
     return B
 try:
     N = int(input("Введите количество элементов в списке A: "))
